@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :collected_coins, dependent: :destroy
+  has_many :killed_monsters, dependent: :destroy
 end
