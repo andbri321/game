@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :collected_coins, dependent: :destroy
   has_many :killed_monsters, dependent: :destroy
+  has_many :deaths, dependent: :destroy
+
 end
