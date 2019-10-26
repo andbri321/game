@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem 'devise'
 
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
