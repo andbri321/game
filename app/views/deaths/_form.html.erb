@@ -1,0 +1,25 @@
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+
+    <% if @deaths.errors.any? %>
+      <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+        <% @deaths.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+  <div class="panel-body">
+    <div class="col-lg-6">
+      <%= form_tag deaths_create_path(), :id => "form" do %>
+        <%= submit_tag('Morrer') %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
