@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+
+    <% if @killed_monster.errors.any? %>
+      <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+        <% @killed_monster.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+  <div class="panel-body">
+    <div class="col-lg-6">
+
+      <%= form_for :killed_monster, :url => killed_monsters_path do |f| %>
+        <p>
+          <%= f.label :monster_id %><br>
+          <%= f.collection_select :monster_id, @monster_all, :id, :name %>
+          <%= f.submit %>
+        </p>
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
