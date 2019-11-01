@@ -7,21 +7,21 @@
       </button>
 
       <button type="button" class="btn btn-primary col-3 m-1">
-        Moedas <span class="badge badge-light"><%= @user.collected_coins_count %></span>
+        Moedas <span class="badge badge-light"><%= level('coins',@user.collected_coins_count) %></span>
       </button>
 
       <button type="button" class="btn btn-primary col-4 m-1">
-        Mortes <span class="badge badge-light"><%= @user.deaths_count %></span>
+        Mortes <span class="badge badge-light"><%= level('deaths',@user.deaths_count) %></span>
       </button>
     </div>
 
     <div class="row mt-1 justify-content-center">
       <button type="button" class="btn btn-primary col-5">
-        Turtles <span class="badge badge-light"><%= @user.turtle_killed_monsters_count %></span>
+        Turtles <span class="badge badge-light"><%= level('turtles',@user.turtle_killed_monsters_count) %></span>
       </button>
 
       <button type="button" class="btn btn-primary col-5 ml-2">
-        Bowser <span class="badge badge-light"><%= @user.bowser_killed_monsters_count %></span>
+        Bowser <span class="badge badge-light"><%= level('bowsers',@user.bowser_killed_monsters_count) %></span>
       </button>
     </div>
   </div>
