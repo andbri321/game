@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'killed_monsters/index'
   get 'deaths/index'
   get 'collected_coins/index'
   post 'collected_coins/create'
