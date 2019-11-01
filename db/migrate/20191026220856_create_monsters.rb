@@ -5,5 +5,7 @@ class CreateMonsters < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    Monster.create(name:'Turtle');
+    Monster.create(name:'Bowser');
   end
 end
