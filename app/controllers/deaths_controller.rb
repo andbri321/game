@@ -8,7 +8,7 @@ class DeathsController < ApplicationController
   def create
     @deaths =  current_user.deaths.create()
     unless @deaths.errors.any?
-      redirect_to deaths_index_path
+      redirect_to deaths_path
     else
       render :index
     end

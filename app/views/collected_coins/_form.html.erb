@@ -14,7 +14,7 @@
   </div>
   <div class="panel-body">
     <div class="col-lg-6">
-      <%= form_tag collected_coins_create_path(), :id => "form" do %>
+      <%= form_tag collected_coins_path(), :id => "form" do %>
         <%= label_tag(:value, "Valor:") %>
         <%= text_field_tag(:value) %>
         <%= submit_tag('Coletar') %>

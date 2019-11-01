@@ -9,7 +9,7 @@ class CollectedCoinsController < ApplicationController
   def create
     @collected_coin =  current_user.collected_coins.create(value:params[:value])
     unless @collected_coin.errors.any?
-      redirect_to collected_coins_index_path
+      redirect_to collected_coins_path
     else
       render :index
     end
